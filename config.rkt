@@ -56,7 +56,7 @@
                                "The Wizard"
                                "You need not fight me. Welcome back, your highness."
                                4
-                               '())))
+                               empty)))
 (define game-start (game player-start map-start))
 
 (define map-size 2) ; starting at (0, 0), the map only goes 2 blocks in every direction
@@ -72,7 +72,8 @@
 |     |     |     |     |  5  |
 |__~a__|__~a__|__~a__|__~a__|__~a__|") ; map with all potential player locations filled with ~a
 
+
 (define (empty-location x y)
-  (location x y "Outside" "Nothing here." #f #f #f 0 '()))
+  (location x y "Outside" "Nothing here." #f #f #f 0 empty))
 
 (provide (all-defined-out))
